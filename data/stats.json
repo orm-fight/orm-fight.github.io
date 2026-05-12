@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-12T20:58:45.756Z",
+  "generatedAt": "2026-05-12T22:31:07.507Z",
   "source": "github-dependency-graph-sbom",
   "workspace": "orm-fight",
   "repoCount": 10,
@@ -39,7 +39,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-better-sqlite3",
-        "createdAt": "2026-05-12T20:58:39Z",
+        "createdAt": "2026-05-12T22:31:03Z",
         "totalPackages": 42,
         "packagesByEcosystem": {
           "npm": 38,
@@ -97,7 +97,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-drizzle",
-        "createdAt": "2026-05-12T20:58:40Z",
+        "createdAt": "2026-05-12T22:31:04Z",
         "totalPackages": 40,
         "packagesByEcosystem": {
           "npm": 39,
@@ -151,7 +151,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-kysely",
-        "createdAt": "2026-05-12T20:58:41Z",
+        "createdAt": "2026-05-12T22:31:04Z",
         "totalPackages": 40,
         "packagesByEcosystem": {
           "npm": 39,
@@ -205,7 +205,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-mikro-orm",
-        "createdAt": "2026-05-12T20:58:41Z",
+        "createdAt": "2026-05-12T22:31:04Z",
         "totalPackages": 180,
         "packagesByEcosystem": {
           "npm": 179,
@@ -263,7 +263,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-node-sqlite",
-        "createdAt": "2026-05-12T20:58:42Z",
+        "createdAt": "2026-05-12T22:31:05Z",
         "totalPackages": 1,
         "packagesByEcosystem": {
           "github": 1
@@ -310,7 +310,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-objection",
-        "createdAt": "2026-05-12T20:58:42Z",
+        "createdAt": "2026-05-12T22:31:05Z",
         "totalPackages": 151,
         "packagesByEcosystem": {
           "npm": 150,
@@ -371,7 +371,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-prisma",
-        "createdAt": "2026-05-12T20:58:42Z",
+        "createdAt": "2026-05-12T22:31:06Z",
         "totalPackages": 39,
         "packagesByEcosystem": {
           "npm": 35,
@@ -386,9 +386,9 @@
           "BSD-2-Clause": 1
         },
         "unlicensedPackages": [
+          "actions/checkout",
           "actions/upload-artifact",
           "actions/setup-node",
-          "actions/checkout",
           "com.github.orm-fight/ledger-prisma"
         ]
       }
@@ -428,7 +428,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-sequelize",
-        "createdAt": "2026-05-12T20:58:44Z",
+        "createdAt": "2026-05-12T22:31:06Z",
         "totalPackages": 140,
         "packagesByEcosystem": {
           "npm": 139,
@@ -486,7 +486,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-sqlite3",
-        "createdAt": "2026-05-12T20:58:45Z",
+        "createdAt": "2026-05-12T22:31:06Z",
         "totalPackages": 1,
         "packagesByEcosystem": {
           "github": 1
@@ -533,7 +533,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-typeorm",
-        "createdAt": "2026-05-12T20:58:45Z",
+        "createdAt": "2026-05-12T22:31:07Z",
         "totalPackages": 196,
         "packagesByEcosystem": {
           "npm": 195,
