@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-12T20:17:09.129Z",
+  "source": "github-dependency-graph-sbom",
+  "workspace": "orm-fight",
+  "repoCount": 10,
+  "repos": [
+    {
+      "name": "ledger-better-sqlite3",
+      "category": "driver",
+      "description": "Minimal double-entry ledger on top of better-sqlite3 (synchronous, no ORM). Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "better-sqlite3": "^11.0.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 1,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-better-sqlite3",
+        "createdAt": "2026-05-12T20:17:05Z",
+        "totalPackages": 42,
+        "packagesByEcosystem": {
+          "npm": 38,
+          "githubactions": 3,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 27,
+          "ISC": 6,
+          "Apache-2.0": 2,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BSD-3-Clause": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "actions/checkout",
+          "actions/upload-artifact",
+          "actions/setup-node",
+          "com.github.orm-fight/ledger-better-sqlite3"
+        ]
+      }
+    },
+    {
+      "name": "ledger-drizzle",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Drizzle ORM over better-sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "better-sqlite3": "^11.0.0",
+        "drizzle-orm": "^0.36.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    },
+    {
+      "name": "ledger-kysely",
+      "category": "query-builder",
+      "description": "Minimal double-entry ledger on top of Kysely (type-safe SQL query builder) over better-sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "better-sqlite3": "^11.0.0",
+        "kysely": "^0.27.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    },
+    {
+      "name": "ledger-mikro-orm",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of MikroORM (EntitySchema, no decorators) over SQLite. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "@mikro-orm/core": "^6.4.0",
+        "@mikro-orm/sqlite": "^6.4.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    },
+    {
+      "name": "ledger-node-sqlite",
+      "category": "driver",
+      "description": "Minimal double-entry ledger on top of Node's built-in node:sqlite module. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=22"
+      },
+      "private": true,
+      "directDependencies": {},
+      "directDevDependencies": {},
+      "directDependencyCount": 0,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    },
+    {
+      "name": "ledger-objection",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Objection.js (with Knex) over sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "knex": "^3.1.0",
+        "objection": "^3.1.0",
+        "sqlite3": "^5.1.7"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 3,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    },
+    {
+      "name": "ledger-prisma",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Prisma. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "@prisma/client": "^6.0.0"
+      },
+      "directDevDependencies": {
+        "prisma": "^6.0.0"
+      },
+      "directDependencyCount": 1,
+      "directDevDependencyCount": 1,
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-prisma",
+        "createdAt": "2026-05-12T20:17:07Z",
+        "totalPackages": 39,
+        "packagesByEcosystem": {
+          "npm": 35,
+          "githubactions": 3,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 24,
+          "Apache-2.0": 8,
+          "Apache-2.0 AND BSD-3-Clause": 1,
+          "BlueOak-1.0.0 AND ISC AND MIT": 1,
+          "BSD-2-Clause": 1
+        },
+        "unlicensedPackages": [
+          "actions/checkout",
+          "actions/upload-artifact",
+          "actions/setup-node",
+          "com.github.orm-fight/ledger-prisma"
+        ]
+      }
+    },
+    {
+      "name": "ledger-sequelize",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Sequelize over sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "sequelize": "^6.37.0",
+        "sqlite3": "^5.1.7"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    },
+    {
+      "name": "ledger-sqlite3",
+      "category": "driver",
+      "description": "Minimal double-entry ledger on top of sqlite3 (no ORM). Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "sqlite3": "^5.1.7"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 1,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-sbom",
+      "sbom": null
+    },
+    {
+      "name": "ledger-typeorm",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of TypeORM (EntitySchema, no decorators) over sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "reflect-metadata": "^0.2.0",
+        "sqlite3": "^5.1.7",
+        "typeorm": "^0.3.20"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 3,
+      "directDevDependencyCount": 0,
+      "sbomStatus": "no-remote-repo",
+      "sbom": null
+    }
+  ]
+}

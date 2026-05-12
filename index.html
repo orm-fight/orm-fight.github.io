@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>orm-fight — dependency stats</title>
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <header>
+      <h1>orm-fight</h1>
+      <p class="lede">
+        Same minimal double-entry ledger, implemented against many TypeScript ORMs and SQL drivers,
+        watched over time. See
+        <a href="https://github.com/orm-fight">github.com/orm-fight</a>.
+      </p>
+    </header>
+
+    <main>
+      <section id="dependency-stats">
+        <h2>Dependency stats</h2>
+        <p class="meta">
+          Direct deps come from each repo's <code>package.json</code>. The transitive graph
+          is the SBOM that GitHub's dependency graph publishes (SPDX 2.3) — the same source
+          that drives Dependabot alerts. Generated <time id="generated-at">—</time>.
+        </p>
+        <div id="stats-table" class="table-wrap" aria-busy="true">Loading…</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Source: <a href="https://github.com/orm-fight/orm-fight.github.io">orm-fight/orm-fight.github.io</a>.
+        Run <code>node scripts/collect-stats.js</code> to refresh
+        <a href="data/stats.json"><code>data/stats.json</code></a>.
+      </p>
+    </footer>
+
+    <script type="module" src="assets/site.js"></script>
+  </body>
+</html>
