@@ -72,6 +72,41 @@ function ghHeaders() {
   return h;
 }
 
+async function fetchLatestRun(repo) {
+  const url = `${GH_API}/repos/${GH_ORG}/${repo}/actions/runs?branch=main&per_page=1`;
+  const res = await fetch(url, { headers: ghHeaders() });
+  if (res.status === 404) return null;
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`runs fetch failed for ${repo}: HTTP ${res.status} ${body.slice(0, 200)}`);
+  }
+  const body = await res.json();
+  const run = body.workflow_runs?.[0];
+  if (!run) return { status: 'no-runs' };
+
+  const startedAt = run.run_started_at ?? run.created_at;
+  const finishedAt = run.status === 'completed' ? run.updated_at : null;
+  const durationMs =
+    startedAt && finishedAt ? new Date(finishedAt) - new Date(startedAt) : null;
+
+  return {
+    status: 'ok',
+    workflowName: run.name,
+    workflowPath: run.path,
+    runStatus: run.status,
+    conclusion: run.conclusion,
+    runNumber: run.run_number,
+    runAttempt: run.run_attempt,
+    headSha: run.head_sha,
+    commitTitle: run.display_title,
+    event: run.event,
+    startedAt,
+    finishedAt,
+    durationMs,
+    htmlUrl: run.html_url,
+  };
+}
+
 async function fetchSbom(repo) {
   const url = `${GH_API}/repos/${GH_ORG}/${repo}/dependency-graph/sbom`;
   const res = await fetch(url, { headers: ghHeaders() });
@@ -165,13 +200,29 @@ async function collectRepo(repoDir) {
   const meta = localRepoMeta(repoDir);
   if (!meta) return null;
 
-  const result = await fetchSbom(meta.name);
-  if (result.status !== 'ok') {
-    return { ...meta, sbomStatus: result.status, sbom: null };
+  const [sbomResult, latestRun] = await Promise.all([
+    fetchSbom(meta.name),
+    fetchLatestRun(meta.name),
+  ]);
+
+  const repoEntry = { ...meta };
+
+  if (latestRun === null) {
+    repoEntry.ci = { status: 'no-remote-repo' };
+  } else {
+    repoEntry.ci = latestRun;
   }
 
-  writeFileSync(join(sbomDir, `${meta.name}.json`), JSON.stringify(result.sbom, null, 2) + '\n');
-  return { ...meta, sbomStatus: 'ok', sbom: summariseSbom(result.sbom) };
+  if (sbomResult.status !== 'ok') {
+    repoEntry.sbomStatus = sbomResult.status;
+    repoEntry.sbom = null;
+    return repoEntry;
+  }
+
+  writeFileSync(join(sbomDir, `${meta.name}.json`), JSON.stringify(sbomResult.sbom, null, 2) + '\n');
+  repoEntry.sbomStatus = 'ok';
+  repoEntry.sbom = summariseSbom(sbomResult.sbom);
+  return repoEntry;
 }
 
 async function main() {
@@ -202,23 +253,31 @@ async function main() {
   writeFileSync(outFile, JSON.stringify(stats, null, 2) + '\n');
 
   process.stdout.write(`\nWrote ${repos.length} repos to ${outFile}\n`);
-  const statusLabel = {
+  const sbomLabel = {
     ok: '',
-    'no-sbom': '(repo exists, no SBOM yet)',
-    'no-remote-repo': '(no GitHub remote yet)',
+    'no-sbom': '(no SBOM yet)',
+    'no-remote-repo': '(no GitHub remote)',
+  };
+  const ciIcon = {
+    success: 'pass',
+    failure: 'FAIL',
+    cancelled: 'cancl',
+    skipped: 'skip ',
+    null: '…    ',
   };
   for (const r of repos) {
+    const ci = r.ci ?? {};
+    const ciTag = ci.status === 'ok' ? (ciIcon[ci.conclusion] ?? `${ci.conclusion}`) : '—    ';
+    let sbomTag;
     if (r.sbomStatus === 'ok') {
       const npm = r.sbom.packagesByEcosystem.npm ?? 0;
-      const total = r.sbom.totalPackages;
-      process.stdout.write(
-        `  ${r.name.padEnd(26)} direct=${r.directDependencyCount} npm=${npm} total=${total}\n`,
-      );
+      sbomTag = `npm=${String(npm).padStart(3)} total=${String(r.sbom.totalPackages).padStart(3)}`;
     } else {
-      process.stdout.write(
-        `  ${r.name.padEnd(26)} direct=${r.directDependencyCount} ${statusLabel[r.sbomStatus] ?? r.sbomStatus}\n`,
-      );
+      sbomTag = sbomLabel[r.sbomStatus] ?? r.sbomStatus;
     }
+    process.stdout.write(
+      `  ${r.name.padEnd(26)} ci=${ciTag.padEnd(6)} direct=${r.directDependencyCount} ${sbomTag}\n`,
+    );
   }
 }
 

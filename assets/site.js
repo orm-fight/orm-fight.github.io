@@ -12,6 +12,14 @@ const STATUS_LABEL = {
   'no-remote-repo': 'no remote yet',
 };
 
+const CI_BADGE = {
+  success: { label: 'pass', cls: 'pass' },
+  failure: { label: 'fail', cls: 'fail' },
+  cancelled: { label: 'cancelled', cls: 'cancelled' },
+  skipped: { label: 'skipped', cls: 'skipped' },
+  null: { label: 'running', cls: 'running' },
+};
+
 const REPO_URL = (name) => `https://github.com/orm-fight/${name}`;
 
 async function loadStats() {
@@ -22,6 +30,17 @@ async function loadStats() {
 
 function fmt(n) {
   return n == null ? '—' : Number(n).toLocaleString('en-US');
+}
+
+function ciCell(ci) {
+  if (!ci || ci.status !== 'ok') {
+    return '<span class="ci-badge muted">—</span>';
+  }
+  const key = ci.runStatus === 'completed' ? ci.conclusion : null;
+  const { label, cls } = CI_BADGE[key] ?? { label: ci.runStatus, cls: 'unknown' };
+  const sha = ci.headSha ? ci.headSha.slice(0, 7) : '';
+  const title = `${ci.workflowName} #${ci.runNumber} on ${sha}\n${ci.commitTitle ?? ''}`;
+  return `<a href="${ci.htmlUrl}" class="ci-badge ${cls}" title="${title.replace(/"/g, '&quot;')}">${label}</a>`;
 }
 
 function topLicenses(licenses, limit = 3) {
@@ -46,6 +65,7 @@ function renderTable(stats) {
       <tr>
         <th>Repo</th>
         <th>Category</th>
+        <th>CI</th>
         <th class="num">Direct deps</th>
         <th class="num">npm</th>
         <th class="num">Total in SBOM</th>
@@ -62,11 +82,19 @@ function renderTable(stats) {
     const tr = document.createElement('tr');
     tr.dataset.status = r.sbomStatus;
 
+    const repoCell =
+      r.sbomStatus === 'no-remote-repo'
+        ? `<code>${r.name}</code>`
+        : `<a href="${REPO_URL(r.name)}"><code>${r.name}</code></a>`;
+    const categoryCell = `<span class="category">${CATEGORY_LABEL[r.category] ?? r.category}</span>`;
+    const directCell = fmt(r.directDependencyCount + r.directDevDependencyCount);
+
     if (r.sbomStatus === 'ok') {
       tr.innerHTML = `
-        <td><a href="${REPO_URL(r.name)}"><code>${r.name}</code></a></td>
-        <td><span class="category">${CATEGORY_LABEL[r.category] ?? r.category}</span></td>
-        <td class="num">${fmt(r.directDependencyCount + r.directDevDependencyCount)}</td>
+        <td>${repoCell}</td>
+        <td>${categoryCell}</td>
+        <td>${ciCell(r.ci)}</td>
+        <td class="num">${directCell}</td>
         <td class="num">${fmt(s.packagesByEcosystem.npm)}</td>
         <td class="num">${fmt(s.totalPackages)}</td>
         <td class="license-list">${topLicenses(s.licenses)}</td>
@@ -74,9 +102,10 @@ function renderTable(stats) {
       `;
     } else {
       tr.innerHTML = `
-        <td><code>${r.name}</code></td>
-        <td><span class="category">${CATEGORY_LABEL[r.category] ?? r.category}</span></td>
-        <td class="num">${fmt(r.directDependencyCount + r.directDevDependencyCount)}</td>
+        <td>${repoCell}</td>
+        <td>${categoryCell}</td>
+        <td>${ciCell(r.ci)}</td>
+        <td class="num">${directCell}</td>
         <td class="num muted" colspan="4">${STATUS_LABEL[r.sbomStatus] ?? r.sbomStatus}</td>
       `;
     }
