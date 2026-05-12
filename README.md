@@ -9,6 +9,8 @@ Source of the public hub for the [orm-fight](https://github.com/orm-fight) exper
 - [`data/stats.json`](data/stats.json) — summary written by the collector.
 - [`data/sbom/<repo>.json`](data/sbom/) — raw SPDX 2.3 SBOM per repo, cached from GitHub.
 - [`scripts/collect-stats.js`](scripts/collect-stats.js) — fetches SBOMs and writes the summary.
+- [`scripts/write-history.js`](scripts/write-history.js) — turns `data/stats.json` + cached SBOMs into per-repo daily snapshots.
+- [`.github/workflows/collect-stats.yml`](.github/workflows/collect-stats.yml) — daily scheduled run; see [Daily history](#daily-history) below.
 - `double-entry.md`, `skr03-english.pdf` — long-form persistence spec and SKR 03 reference.
 
 ## Where the data comes from
@@ -42,6 +44,30 @@ Per-repo status in `stats.json` is one of:
 - `no-remote-repo` — repo isn't on the `orm-fight` org yet. Local dev only.
 
 The script uses only Node built-ins (Node 20+ for `fetch` and `--env-file`), so this repo has no `package.json` or `node_modules` of its own — the site that reports on ORM dependency footprints should not have a dependency footprint to report on.
+
+## Daily history
+
+A scheduled GitHub Action ([`.github/workflows/collect-stats.yml`](.github/workflows/collect-stats.yml)) runs daily at 05:17 UTC. Each run:
+
+1. Shallow-clones every public `ledger-*` repo in the `orm-fight` org as a sibling of this checkout.
+2. Runs `scripts/collect-stats.js` to refresh `data/stats.json` + `data/sbom/<repo>.json`.
+3. Commits the refresh to `main` so the site renders the latest state.
+4. Runs `scripts/write-history.js` to build one self-contained snapshot per repo, and appends it to a separate orphan branch `stats-history` under:
+
+   ```
+   history/<repo>/<YYYY-MM-DD>.json
+   ```
+
+Each snapshot includes the per-repo summary, direct deps, CI run state, and the full SPDX document at that moment — `ls history/<repo>/` reads as a timeline for that repo, and any single file is enough to reconstruct what the graph looked like on a given day.
+
+The history branch is intentionally an orphan branch so the GitHub Pages tree on `main` stays small (~hundreds of KB) while the archive grows independently (~700 KB/day across all 10 repos, well-compressed by git's delta packing since most days only mutate a handful of versions).
+
+To trigger a run manually (or to backfill a specific date):
+
+```
+gh workflow run collect-stats --repo orm-fight/orm-fight.github.io
+gh workflow run collect-stats --repo orm-fight/orm-fight.github.io -f date=2026-05-13
+```
 
 ## Local preview
 

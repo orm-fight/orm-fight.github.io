@@ -1,0 +1,114 @@
+name: collect-stats
+
+# Refreshes data/stats.json + data/sbom/*.json on main (the version the
+# site renders), and appends a per-repo daily snapshot to the
+# stats-history orphan branch under history/<repo>/<YYYY-MM-DD>.json.
+
+on:
+  schedule:
+    # 05:17 UTC daily — outside GitHub's busy cron windows so we don't
+    # queue behind hundreds of other 00:00 / 06:00 jobs.
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Snapshot date (YYYY-MM-DD). Defaults to today (UTC).'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-stats
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v4
+        with:
+          # Default token + fetch-depth needed for the push to stats-history.
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Clone sibling ledger-* repos
+        # The collector walks ../ledger-* directories for direct-dep info
+        # from each package.json. We shallow-clone every public
+        # ledger-* repo in the org alongside this checkout.
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/.."
+          gh api 'orgs/orm-fight/repos?per_page=100' \
+            --jq '.[] | select(.name | startswith("ledger-")) | .name' \
+            | while IFS= read -r repo; do
+              echo "Cloning $repo"
+              gh repo clone "orm-fight/$repo" "$repo" -- --depth=1 --quiet
+            done
+
+      - name: Collect stats
+        run: node scripts/collect-stats.js
+
+      - name: Resolve snapshot date
+        id: date
+        run: |
+          d='${{ github.event.inputs.date }}'
+          [ -z "$d" ] && d=$(date -u +%Y-%m-%d)
+          echo "date=$d" >> "$GITHUB_OUTPUT"
+          echo "Snapshot date: $d"
+
+      - name: Build per-repo history snapshots into tmp
+        run: |
+          SNAP="$RUNNER_TEMP/history-snapshot"
+          mkdir -p "$SNAP"
+          node scripts/write-history.js --out "$SNAP" --date '${{ steps.date.outputs.date }}'
+
+      - name: Configure git identity
+        run: |
+          git config user.name 'orm-fight-bot'
+          git config user.email '278690365+orm-fight-bot@users.noreply.github.com'
+
+      - name: Commit refreshed latest stats to main
+        run: |
+          set -euo pipefail
+          git add data/stats.json data/sbom/
+          if git diff --quiet --cached; then
+            echo "No changes to data/ on main"
+          else
+            git commit -m "chore: refresh stats (${{ steps.date.outputs.date }})"
+            git push origin HEAD:main
+          fi
+
+      - name: Append snapshot to stats-history branch
+        run: |
+          set -euo pipefail
+          SNAP="$RUNNER_TEMP/history-snapshot"
+          WT="$RUNNER_TEMP/history-wt"
+
+          git fetch origin stats-history --quiet 2>/dev/null || true
+          if git rev-parse --verify --quiet origin/stats-history >/dev/null; then
+            git worktree add -B stats-history "$WT" origin/stats-history
+          else
+            echo "stats-history doesn't exist — creating orphan branch"
+            git worktree add --orphan -b stats-history "$WT"
+          fi
+
+          mkdir -p "$WT/history"
+          cp -R "$SNAP/history/." "$WT/history/"
+
+          cd "$WT"
+          git add history/
+          if git diff --quiet --cached; then
+            echo "No new history files to commit"
+          else
+            git commit -m "snapshot: ${{ steps.date.outputs.date }}"
+            git push origin stats-history
+          fi
