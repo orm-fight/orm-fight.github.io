@@ -22,9 +22,19 @@
         <p class="meta">
           Direct deps come from each repo's <code>package.json</code>. The transitive graph
           is the SBOM that GitHub's dependency graph publishes (SPDX 2.3) — the same source
-          that drives Dependabot alerts. Generated <time id="generated-at">—</time>.
+          that drives Dependabot alerts. Sparklines show total SBOM packages over the last
+          <span id="trend-window">30</span> days. Generated <time id="generated-at">—</time>.
         </p>
         <div id="stats-table" class="table-wrap" aria-busy="true">Loading…</div>
+      </section>
+
+      <section id="recent-changes">
+        <h2>Recent changes</h2>
+        <p class="meta">
+          Direct-dep adds, bumps, removes, and CI pass/fail flips across all repos
+          over the last <span id="feed-window">30</span> days, newest first.
+        </p>
+        <div id="changes-feed" aria-busy="true">Loading…</div>
       </section>
     </main>
 

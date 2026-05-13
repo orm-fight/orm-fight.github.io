@@ -76,18 +76,9 @@ jobs:
           git config user.name 'orm-fight-bot'
           git config user.email '278690365+orm-fight-bot@users.noreply.github.com'
 
-      - name: Commit refreshed latest stats to main
-        run: |
-          set -euo pipefail
-          git add data/stats.json data/sbom/
-          if git diff --quiet --cached; then
-            echo "No changes to data/ on main"
-          else
-            git commit -m "chore: refresh stats (${{ steps.date.outputs.date }})"
-            git push origin HEAD:main
-          fi
-
-      - name: Append snapshot to stats-history branch
+      - name: Prepare stats-history worktree with today's snapshot
+        # Set this up before build-trends.js so trends.json is computed
+        # against the merged archive (existing snapshots + today's).
         run: |
           set -euo pipefail
           SNAP="$RUNNER_TEMP/history-snapshot"
@@ -104,7 +95,24 @@ jobs:
           mkdir -p "$WT/history"
           cp -R "$SNAP/history/." "$WT/history/"
 
-          cd "$WT"
+      - name: Build trends.json from the merged history archive
+        run: node scripts/build-trends.js --history "$RUNNER_TEMP/history-wt"
+
+      - name: Commit refreshed latest stats + trends to main
+        run: |
+          set -euo pipefail
+          git add data/stats.json data/sbom/ data/trends.json
+          if git diff --quiet --cached; then
+            echo "No changes to data/ on main"
+          else
+            git commit -m "chore: refresh stats (${{ steps.date.outputs.date }})"
+            git push origin HEAD:main
+          fi
+
+      - name: Push snapshot to stats-history branch
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/history-wt"
           git add history/
           if git diff --quiet --cached; then
             echo "No new history files to commit"
