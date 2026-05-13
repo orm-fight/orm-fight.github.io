@@ -1,8 +1,13 @@
 name: collect-stats
 
-# Refreshes data/stats.json + data/sbom/*.json on main (the version the
-# site renders), and appends a per-repo daily snapshot to the
-# stats-history orphan branch under history/<repo>/<YYYY-MM-DD>.json.
+# Refreshes data on the stats-history branch only. Main is never touched.
+#
+# Each run writes, on stats-history:
+# - data/stats.json + data/sbom/<repo>.json — the latest summary the site renders.
+# - data/trends.json — derived rolling-window view of the archive.
+# - history/<repo>/<YYYY-MM-DD>.json — the day's per-repo snapshot.
+#
+# The deploy-site workflow takes care of getting these onto Pages.
 
 on:
   schedule:
@@ -30,10 +35,10 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout site repo
+      - name: Checkout main (scripts and site code)
         uses: actions/checkout@v4
         with:
-          # Default token + fetch-depth needed for the push to stats-history.
+          # Needed for fetching stats-history later.
           persist-credentials: true
 
       - uses: actions/setup-node@v4
@@ -55,6 +60,9 @@ jobs:
             done
 
       - name: Collect stats
+        # Writes data/stats.json + data/sbom/<repo>.json into the runner's
+        # working copy. These never get committed to main — the next steps
+        # move them to the stats-history worktree.
         run: node scripts/collect-stats.js
 
       - name: Resolve snapshot date
@@ -65,23 +73,14 @@ jobs:
           echo "date=$d" >> "$GITHUB_OUTPUT"
           echo "Snapshot date: $d"
 
-      - name: Build per-repo history snapshots into tmp
-        run: |
-          SNAP="$RUNNER_TEMP/history-snapshot"
-          mkdir -p "$SNAP"
-          node scripts/write-history.js --out "$SNAP" --date '${{ steps.date.outputs.date }}'
-
       - name: Configure git identity
         run: |
           git config user.name 'orm-fight-bot'
           git config user.email '278690365+orm-fight-bot@users.noreply.github.com'
 
-      - name: Prepare stats-history worktree with today's snapshot
-        # Set this up before build-trends.js so trends.json is computed
-        # against the merged archive (existing snapshots + today's).
+      - name: Prepare stats-history worktree
         run: |
           set -euo pipefail
-          SNAP="$RUNNER_TEMP/history-snapshot"
           WT="$RUNNER_TEMP/history-wt"
 
           git fetch origin stats-history --quiet 2>/dev/null || true
@@ -92,31 +91,33 @@ jobs:
             git worktree add --orphan -b stats-history "$WT"
           fi
 
-          mkdir -p "$WT/history"
-          cp -R "$SNAP/history/." "$WT/history/"
+      - name: Write today's history snapshot into stats-history
+        run: node scripts/write-history.js --out "$RUNNER_TEMP/history-wt" --date '${{ steps.date.outputs.date }}'
 
-      - name: Build trends.json from the merged history archive
-        run: node scripts/build-trends.js --history "$RUNNER_TEMP/history-wt"
+      - name: Build trends.json against the merged archive
+        run: |
+          WT="$RUNNER_TEMP/history-wt"
+          mkdir -p "$WT/data"
+          node scripts/build-trends.js --history "$WT" --out "$WT/data/trends.json"
 
-      - name: Commit refreshed latest stats + trends to main
+      - name: Copy latest stats and SBOMs into stats-history
         run: |
           set -euo pipefail
-          git add data/stats.json data/sbom/ data/trends.json
-          if git diff --quiet --cached; then
-            echo "No changes to data/ on main"
-          else
-            git commit -m "chore: refresh stats (${{ steps.date.outputs.date }})"
-            git push origin HEAD:main
-          fi
+          WT="$RUNNER_TEMP/history-wt"
+          mkdir -p "$WT/data/sbom"
+          cp data/stats.json "$WT/data/stats.json"
+          # Clear the previous SBOM set so removed repos don't linger.
+          rm -f "$WT"/data/sbom/*.json
+          cp -R data/sbom/. "$WT/data/sbom/"
 
-      - name: Push snapshot to stats-history branch
+      - name: Commit and push stats-history
         run: |
           set -euo pipefail
           cd "$RUNNER_TEMP/history-wt"
-          git add history/
+          git add data/ history/
           if git diff --quiet --cached; then
-            echo "No new history files to commit"
+            echo "No changes to stats-history"
           else
-            git commit -m "snapshot: ${{ steps.date.outputs.date }}"
+            git commit -m "stats: ${{ steps.date.outputs.date }}"
             git push origin stats-history
           fi

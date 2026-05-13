@@ -1,0 +1,87 @@
+name: deploy-site
+
+# Builds and deploys the GitHub Pages site.
+#
+# Main is the source of truth for site code (index.html, assets/, reference
+# docs). The stats-history branch is the source of truth for data (data/).
+# This workflow assembles the two into the deployed artifact.
+#
+# Triggers:
+#   - push to main          — site code changed
+#   - collect-stats completed — data changed
+#   - workflow_dispatch     — manual redeploy
+
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: [collect-stats]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Skip if triggered by a failed collect-stats run.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout main (site code)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Fetch data/ from stats-history
+        run: |
+          set -euo pipefail
+          git fetch origin stats-history --depth 1 --quiet 2>/dev/null || true
+          if git rev-parse --verify --quiet origin/stats-history >/dev/null; then
+            git worktree add /tmp/stats-history origin/stats-history
+            if [ -d /tmp/stats-history/data ]; then
+              rm -rf data
+              cp -R /tmp/stats-history/data data
+              echo "Pulled $(find data -type f | wc -l) data files from stats-history."
+            else
+              echo "stats-history has no data/ yet — site will deploy empty."
+            fi
+          else
+            echo "stats-history branch doesn't exist yet — site will deploy empty."
+          fi
+
+      - name: Stage Pages artifact
+        run: |
+          set -euo pipefail
+          mkdir _site
+          cp -R index.html assets _site/
+          [ -f double-entry.md ] && cp double-entry.md _site/ || true
+          [ -f skr03-english.pdf ] && cp skr03-english.pdf _site/ || true
+          if [ -d data ]; then
+            cp -R data _site/data
+          else
+            mkdir _site/data
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

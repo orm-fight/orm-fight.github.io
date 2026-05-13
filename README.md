@@ -1,18 +1,20 @@
 # orm-fight.github.io
 
-Source of the public hub for the [orm-fight](https://github.com/orm-fight) experiment. Served by GitHub Pages directly from the `main` branch.
+Source of the public hub for the [orm-fight](https://github.com/orm-fight) experiment. Deployed to GitHub Pages by the [`deploy-site`](.github/workflows/deploy-site.yml) workflow, which assembles the site code on `main` with the `data/` tree from the `stats-history` branch. **`main` carries no `data/` files** — all generated data lives on `stats-history`.
 
 ## What's here
 
 - [`index.html`](index.html) — landing page. Renders the dependency stats table.
 - [`assets/`](assets/) — `site.css`, `site.js`. No bundler, no framework.
-- [`data/stats.json`](data/stats.json) — summary written by the collector.
-- [`data/sbom/<repo>.json`](data/sbom/) — raw SPDX 2.3 SBOM per repo, cached from GitHub.
-- [`data/trends.json`](data/trends.json) — compact rolling-window series + recent-changes feed, derived from the `stats-history` archive. Drives the sparklines and feed on the site.
+- `data/` (gitignored on `main`, authoritative on `stats-history`):
+  - `data/stats.json` — summary written by the collector.
+  - `data/sbom/<repo>.json` — raw SPDX 2.3 SBOM per repo, cached from GitHub.
+  - `data/trends.json` — compact rolling-window series + recent-changes feed, derived from the `stats-history` archive. Drives the sparklines and feed on the site.
 - [`scripts/collect-stats.js`](scripts/collect-stats.js) — fetches SBOMs and writes the summary.
 - [`scripts/write-history.js`](scripts/write-history.js) — turns `data/stats.json` + cached SBOMs into per-repo daily snapshots.
 - [`scripts/build-trends.js`](scripts/build-trends.js) — reads the daily snapshots and writes `data/trends.json`.
-- [`.github/workflows/collect-stats.yml`](.github/workflows/collect-stats.yml) — daily scheduled run; see [Daily history](#daily-history) below.
+- [`.github/workflows/collect-stats.yml`](.github/workflows/collect-stats.yml) — daily scheduled data refresh; pushes only to `stats-history`. See [Daily history](#daily-history).
+- [`.github/workflows/deploy-site.yml`](.github/workflows/deploy-site.yml) — builds the Pages artifact from `main` + `stats-history` and deploys it. See [Deployment](#deployment).
 - `double-entry.md`, `skr03-english.pdf` — long-form persistence spec and SKR 03 reference.
 
 ## Where the data comes from
@@ -49,22 +51,33 @@ The script uses only Node built-ins (Node 20+ for `fetch` and `--env-file`), so 
 
 ## Daily history
 
-A scheduled GitHub Action ([`.github/workflows/collect-stats.yml`](.github/workflows/collect-stats.yml)) runs daily at 05:17 UTC. Each run:
+A scheduled GitHub Action ([`.github/workflows/collect-stats.yml`](.github/workflows/collect-stats.yml)) runs daily at 05:17 UTC. **It commits only to `stats-history`** — `main` is never touched. Each run:
 
-1. Shallow-clones every public `ledger-*` repo in the `orm-fight` org as a sibling of this checkout.
-2. Runs `scripts/collect-stats.js` to refresh `data/stats.json` + `data/sbom/<repo>.json`.
-3. Runs `scripts/write-history.js` to build one self-contained snapshot per repo, copies them into a worktree checked out from the orphan `stats-history` branch, under:
+1. Shallow-clones every public `ledger-*` repo in the `orm-fight` org as a sibling of the checkout.
+2. Runs `scripts/collect-stats.js` to produce `data/stats.json` + `data/sbom/<repo>.json` in the runner's working tree (not committed to `main`).
+3. Sets up a worktree on the orphan `stats-history` branch, runs `scripts/write-history.js` to write today's per-repo snapshot under:
 
    ```
    history/<repo>/<YYYY-MM-DD>.json
    ```
-4. Runs `scripts/build-trends.js` against the merged archive (existing history + today's snapshot) to produce `data/trends.json` — a compact rolling-window view of total-package counts, direct-dep counts, CI conclusions, plus a feed of dep adds/bumps/removes and CI pass/fail flips.
-5. Commits the refresh (`data/stats.json`, `data/sbom/`, `data/trends.json`) to `main` so the site renders the latest state.
-6. Commits and pushes today's snapshot onto the `stats-history` branch.
+4. Runs `scripts/build-trends.js` against the merged archive (existing history + today's snapshot) to produce `data/trends.json` directly in the worktree.
+5. Copies `data/stats.json` and `data/sbom/<repo>.json` from the runner into the worktree, then commits and pushes both `data/` and `history/` to `stats-history` in a single commit.
 
 Each snapshot includes the per-repo summary, direct deps, CI run state, and the full SPDX document at that moment — `ls history/<repo>/` reads as a timeline for that repo, and any single file is enough to reconstruct what the graph looked like on a given day.
 
-The history branch is intentionally an orphan branch so the GitHub Pages tree on `main` stays small (~hundreds of KB) while the archive grows independently (~700 KB/day across all 10 repos, well-compressed by git's delta packing since most days only mutate a handful of versions). Only the much smaller `data/trends.json` (summaries, not raw SBOMs) lands on `main`.
+The history branch is intentionally an orphan branch so the tree the `deploy-site` workflow pulls each time stays small (`data/` is on the order of hundreds of KB) while the archive grows independently (~700 KB/day across all 10 repos, well-compressed by git's delta packing since most days only mutate a handful of versions).
+
+## Deployment
+
+[`.github/workflows/deploy-site.yml`](.github/workflows/deploy-site.yml) builds the Pages artifact and deploys it. It triggers on:
+
+- push to `main` (site code changed)
+- `collect-stats` completing successfully (data changed)
+- manual `workflow_dispatch`
+
+Each deploy checks out `main` for code, pulls `data/` from the tip of `stats-history`, stages everything under `_site/`, and uploads to Pages via `actions/deploy-pages`.
+
+**One-time setup**: the GitHub Pages source must be set to **GitHub Actions** (not "Deploy from a branch") in the repo settings — Settings → Pages → Build and deployment → Source.
 
 To trigger a run manually (or to backfill a specific date):
 
@@ -75,8 +88,19 @@ gh workflow run collect-stats --repo orm-fight/orm-fight.github.io -f date=2026-
 
 ## Local preview
 
+`data/` is not committed to `main`, so a fresh clone has no data. Run the collector once to populate it:
+
 ```
+node --env-file=../.env scripts/collect-stats.js
 python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000>. The page fetches `data/stats.json` via `fetch()`, so opening `index.html` directly with `file://` will not work.
+
+`data/trends.json` requires the `stats-history` archive — to preview the sparklines and feed locally, also clone the branch and run `build-trends.js`:
+
+```
+git clone --branch stats-history --single-branch --depth 30 \
+  git@github.com:orm-fight/orm-fight.github.io.git /tmp/stats-history
+node scripts/build-trends.js --history /tmp/stats-history
+```
