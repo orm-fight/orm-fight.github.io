@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.orm-fight/ledger-node-sqlite",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f819ffed-1df9-4da3-83a8-beea261ffbc2",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20260512151742-fb7b26d83412+dirty",
+      "Tool: GitHub.com-Dependency-Graph",
+      "Tool: npm-cyclonedx-sbom"
+    ],
+    "created": "2026-05-14T08:04:47Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.orm-fight/ledger-node-sqlite",
+      "SPDXID": "SPDXRef-github-orm-fight-ledger-node-sqlite-main-4a2a1a",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/orm-fight/ledger-node-sqlite",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/orm-fight/ledger-node-sqlite@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-orm-fight-ledger-node-sqlite-main-4a2a1a",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

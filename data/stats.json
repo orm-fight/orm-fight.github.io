@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-14T08:04:50.184Z",
+  "source": "github-dependency-graph-sbom",
+  "workspace": "orm-fight",
+  "repoCount": 10,
+  "repos": [
+    {
+      "name": "ledger-better-sqlite3",
+      "category": "driver",
+      "description": "Minimal double-entry ledger on top of better-sqlite3 (synchronous, no ORM). Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "better-sqlite3": "^11.0.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 1,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 2,
+        "runAttempt": 1,
+        "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b",
+        "commitTitle": "fix: add lockfile",
+        "event": "push",
+        "startedAt": "2026-05-11T23:29:44Z",
+        "finishedAt": "2026-05-11T23:30:01Z",
+        "durationMs": 17000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-better-sqlite3/actions/runs/25703475347"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-better-sqlite3",
+        "createdAt": "2026-05-14T08:04:45Z",
+        "totalPackages": 42,
+        "packagesByEcosystem": {
+          "npm": 38,
+          "githubactions": 3,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 27,
+          "ISC": 6,
+          "Apache-2.0": 2,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BSD-3-Clause": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "actions/checkout",
+          "actions/upload-artifact",
+          "actions/setup-node",
+          "com.github.orm-fight/ledger-better-sqlite3"
+        ]
+      }
+    },
+    {
+      "name": "ledger-drizzle",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Drizzle ORM over better-sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "better-sqlite3": "^11.0.0",
+        "drizzle-orm": "^0.36.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 1,
+        "runAttempt": 2,
+        "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2",
+        "commitTitle": "chore: initial scaffold — minimal double-entry ledger on Drizzle ORM",
+        "event": "push",
+        "startedAt": "2026-05-12T20:39:56Z",
+        "finishedAt": "2026-05-12T20:40:14Z",
+        "durationMs": 18000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-drizzle/actions/runs/25760429641"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-drizzle",
+        "createdAt": "2026-05-14T08:04:46Z",
+        "totalPackages": 40,
+        "packagesByEcosystem": {
+          "npm": 39,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 27,
+          "ISC": 6,
+          "Apache-2.0": 3,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BSD-3-Clause": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-drizzle"
+        ]
+      }
+    },
+    {
+      "name": "ledger-kysely",
+      "category": "query-builder",
+      "description": "Minimal double-entry ledger on top of Kysely (type-safe SQL query builder) over better-sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "better-sqlite3": "^11.0.0",
+        "kysely": "^0.27.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 1,
+        "runAttempt": 2,
+        "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd",
+        "commitTitle": "chore: initial scaffold — minimal double-entry ledger on Kysely",
+        "event": "push",
+        "startedAt": "2026-05-12T20:39:57Z",
+        "finishedAt": "2026-05-12T20:40:12Z",
+        "durationMs": 15000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-kysely/actions/runs/25760415033"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-kysely",
+        "createdAt": "2026-05-14T08:04:47Z",
+        "totalPackages": 40,
+        "packagesByEcosystem": {
+          "npm": 39,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 28,
+          "ISC": 6,
+          "Apache-2.0": 2,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BSD-3-Clause": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-kysely"
+        ]
+      }
+    },
+    {
+      "name": "ledger-mikro-orm",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of MikroORM (EntitySchema, no decorators) over SQLite. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "@mikro-orm/core": "^6.4.0",
+        "@mikro-orm/sqlite": "^6.4.0"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 2,
+        "runAttempt": 1,
+        "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925",
+        "commitTitle": "fix: enforce account FKs on journal entries",
+        "event": "push",
+        "startedAt": "2026-05-12T20:57:43Z",
+        "finishedAt": "2026-05-12T20:58:01Z",
+        "durationMs": 18000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-mikro-orm/actions/runs/25761793383"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-mikro-orm",
+        "createdAt": "2026-05-14T08:04:47Z",
+        "totalPackages": 180,
+        "packagesByEcosystem": {
+          "npm": 179,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 119,
+          "ISC": 45,
+          "Apache-2.0": 3,
+          "BSD-2-Clause": 2,
+          "BSD-3-Clause": 2,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BlueOak-1.0.0": 1,
+          "BSD-2-Clause AND BSD-3-Clause": 1,
+          "CC0-1.0 AND MIT": 1,
+          "GPL-3.0": 1,
+          "ISC AND MIT": 1,
+          "MIT AND MIT-0": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-mikro-orm"
+        ]
+      }
+    },
+    {
+      "name": "ledger-node-sqlite",
+      "category": "driver",
+      "description": "Minimal double-entry ledger on top of Node's built-in node:sqlite module. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=22"
+      },
+      "private": true,
+      "directDependencies": {},
+      "directDevDependencies": {},
+      "directDependencyCount": 0,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 1,
+        "runAttempt": 2,
+        "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950",
+        "commitTitle": "chore: initial scaffold — minimal double-entry ledger on node:sqlite",
+        "event": "push",
+        "startedAt": "2026-05-12T20:39:58Z",
+        "finishedAt": "2026-05-12T20:40:16Z",
+        "durationMs": 18000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-node-sqlite/actions/runs/25760462764"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-node-sqlite",
+        "createdAt": "2026-05-14T08:04:47Z",
+        "totalPackages": 1,
+        "packagesByEcosystem": {
+          "github": 1
+        },
+        "licenses": {},
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-node-sqlite"
+        ]
+      }
+    },
+    {
+      "name": "ledger-objection",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Objection.js (with Knex) over sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "knex": "^3.1.0",
+        "objection": "^3.1.0",
+        "sqlite3": "^5.1.7"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 3,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 1,
+        "runAttempt": 2,
+        "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc",
+        "commitTitle": "chore: initial scaffold — minimal double-entry ledger on Objection.js",
+        "event": "push",
+        "startedAt": "2026-05-12T20:39:59Z",
+        "finishedAt": "2026-05-12T20:40:21Z",
+        "durationMs": 22000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-objection/actions/runs/25760477853"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-objection",
+        "createdAt": "2026-05-14T08:04:48Z",
+        "totalPackages": 151,
+        "packagesByEcosystem": {
+          "npm": 150,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 94,
+          "ISC": 43,
+          "BSD-3-Clause": 3,
+          "Apache-2.0": 2,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BlueOak-1.0.0": 1,
+          "BSD-2-Clause": 1,
+          "CC0-1.0 AND MIT": 1,
+          "GPL-3.0": 1,
+          "ISC AND MIT": 1,
+          "MIT AND MIT-0": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-objection"
+        ]
+      }
+    },
+    {
+      "name": "ledger-prisma",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Prisma. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "@prisma/client": "^6.0.0"
+      },
+      "directDevDependencies": {
+        "prisma": "^6.0.0"
+      },
+      "directDependencyCount": 1,
+      "directDevDependencyCount": 1,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 2,
+        "runAttempt": 2,
+        "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c",
+        "commitTitle": "feature: use sbom api",
+        "event": "push",
+        "startedAt": "2026-05-11T16:09:55Z",
+        "finishedAt": "2026-05-11T16:10:38Z",
+        "durationMs": 43000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-prisma/actions/runs/25681899378"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-prisma",
+        "createdAt": "2026-05-14T08:04:48Z",
+        "totalPackages": 39,
+        "packagesByEcosystem": {
+          "npm": 35,
+          "githubactions": 3,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 24,
+          "Apache-2.0": 8,
+          "Apache-2.0 AND BSD-3-Clause": 1,
+          "BlueOak-1.0.0 AND ISC AND MIT": 1,
+          "BSD-2-Clause": 1
+        },
+        "unlicensedPackages": [
+          "actions/setup-node",
+          "actions/checkout",
+          "actions/upload-artifact",
+          "com.github.orm-fight/ledger-prisma"
+        ]
+      }
+    },
+    {
+      "name": "ledger-sequelize",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of Sequelize over sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "sequelize": "^6.37.0",
+        "sqlite3": "^5.1.7"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 2,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 1,
+        "runAttempt": 2,
+        "headSha": "c07d9824be8785119a591b717718d5cde64eb98f",
+        "commitTitle": "chore: initial scaffold — minimal double-entry ledger on Sequelize",
+        "event": "push",
+        "startedAt": "2026-05-12T20:40:00Z",
+        "finishedAt": "2026-05-12T20:40:19Z",
+        "durationMs": 19000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-sequelize/actions/runs/25760500902"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-sequelize",
+        "createdAt": "2026-05-14T08:04:49Z",
+        "totalPackages": 140,
+        "packagesByEcosystem": {
+          "npm": 139,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 85,
+          "ISC": 43,
+          "Apache-2.0": 2,
+          "BSD-3-Clause": 2,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BlueOak-1.0.0": 1,
+          "BSD-2-Clause": 1,
+          "CC0-1.0 AND MIT": 1,
+          "ISC AND MIT": 1,
+          "MIT AND MIT-0": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-sequelize"
+        ]
+      }
+    },
+    {
+      "name": "ledger-sqlite3",
+      "category": "driver",
+      "description": "Minimal double-entry ledger on top of sqlite3 (no ORM). Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "sqlite3": "^5.1.7"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 1,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 2,
+        "runAttempt": 1,
+        "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87",
+        "commitTitle": "chore: update deps",
+        "event": "push",
+        "startedAt": "2026-05-11T14:53:38Z",
+        "finishedAt": "2026-05-11T14:53:58Z",
+        "durationMs": 20000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-sqlite3/actions/runs/25677785509"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-sqlite3",
+        "createdAt": "2026-05-14T08:04:49Z",
+        "totalPackages": 1,
+        "packagesByEcosystem": {
+          "github": 1
+        },
+        "licenses": {},
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-sqlite3"
+        ]
+      }
+    },
+    {
+      "name": "ledger-typeorm",
+      "category": "orm",
+      "description": "Minimal double-entry ledger on top of TypeORM (EntitySchema, no decorators) over sqlite3. Mirrors the Wikipedia Double-entry bookkeeping Transaction Example.",
+      "engines": {
+        "node": ">=20"
+      },
+      "private": true,
+      "directDependencies": {
+        "reflect-metadata": "^0.2.0",
+        "sqlite3": "^5.1.7",
+        "typeorm": "^0.3.20"
+      },
+      "directDevDependencies": {},
+      "directDependencyCount": 3,
+      "directDevDependencyCount": 0,
+      "ci": {
+        "status": "ok",
+        "workflowName": "CI",
+        "workflowPath": ".github/workflows/ci.yml",
+        "runStatus": "completed",
+        "conclusion": "success",
+        "runNumber": 2,
+        "runAttempt": 1,
+        "headSha": "bde1b8df00a3c565030af360e14172026360688b",
+        "commitTitle": "fix: enforce account FKs on journal entries",
+        "event": "push",
+        "startedAt": "2026-05-12T20:57:45Z",
+        "finishedAt": "2026-05-12T20:58:12Z",
+        "durationMs": 27000,
+        "htmlUrl": "https://github.com/orm-fight/ledger-typeorm/actions/runs/25761794562"
+      },
+      "sbomStatus": "ok",
+      "sbom": {
+        "spdxVersion": "SPDX-2.3",
+        "documentName": "com.github.orm-fight/ledger-typeorm",
+        "createdAt": "2026-05-14T08:04:50Z",
+        "totalPackages": 196,
+        "packagesByEcosystem": {
+          "npm": 195,
+          "github": 1
+        },
+        "licenses": {
+          "MIT": 121,
+          "ISC": 54,
+          "BlueOak-1.0.0": 5,
+          "Apache-2.0": 3,
+          "BSD-2-Clause": 2,
+          "BSD-3-Clause": 2,
+          "0BSD": 1,
+          "Apache-2.0 AND MIT": 1,
+          "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
+          "BSD-3-Clause AND MIT": 1,
+          "ISC AND MIT": 1,
+          "LicenseRef-scancode-unknown-license-reference AND MIT": 1,
+          "MIT AND MIT-0": 1,
+          "MIT OR (MIT AND WTFPL)": 1
+        },
+        "unlicensedPackages": [
+          "com.github.orm-fight/ledger-typeorm"
+        ]
+      }
+    }
+  ]
+}

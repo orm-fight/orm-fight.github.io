@@ -1,0 +1,634 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-14T08:04:51.093Z",
+  "windowDays": 30,
+  "snapshotDates": [
+    "2026-05-05",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14"
+  ],
+  "repos": {
+    "ledger-better-sqlite3": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 42
+        },
+        {
+          "date": "2026-05-12",
+          "value": 42
+        },
+        {
+          "date": "2026-05-13",
+          "value": 42
+        },
+        {
+          "date": "2026-05-14",
+          "value": 42
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 1
+        },
+        {
+          "date": "2026-05-12",
+          "value": 1
+        },
+        {
+          "date": "2026-05-13",
+          "value": 1
+        },
+        {
+          "date": "2026-05-14",
+          "value": 1
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-drizzle": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 40
+        },
+        {
+          "date": "2026-05-12",
+          "value": 40
+        },
+        {
+          "date": "2026-05-13",
+          "value": 40
+        },
+        {
+          "date": "2026-05-14",
+          "value": 40
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 2
+        },
+        {
+          "date": "2026-05-12",
+          "value": 2
+        },
+        {
+          "date": "2026-05-13",
+          "value": 2
+        },
+        {
+          "date": "2026-05-14",
+          "value": 2
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-kysely": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 40
+        },
+        {
+          "date": "2026-05-12",
+          "value": 40
+        },
+        {
+          "date": "2026-05-13",
+          "value": 40
+        },
+        {
+          "date": "2026-05-14",
+          "value": 40
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 2
+        },
+        {
+          "date": "2026-05-12",
+          "value": 2
+        },
+        {
+          "date": "2026-05-13",
+          "value": 2
+        },
+        {
+          "date": "2026-05-14",
+          "value": 2
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-mikro-orm": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 180
+        },
+        {
+          "date": "2026-05-12",
+          "value": 180
+        },
+        {
+          "date": "2026-05-13",
+          "value": 180
+        },
+        {
+          "date": "2026-05-14",
+          "value": 180
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 2
+        },
+        {
+          "date": "2026-05-12",
+          "value": 2
+        },
+        {
+          "date": "2026-05-13",
+          "value": 2
+        },
+        {
+          "date": "2026-05-14",
+          "value": 2
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-node-sqlite": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 1
+        },
+        {
+          "date": "2026-05-12",
+          "value": 1
+        },
+        {
+          "date": "2026-05-13",
+          "value": 1
+        },
+        {
+          "date": "2026-05-14",
+          "value": 1
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 0
+        },
+        {
+          "date": "2026-05-12",
+          "value": 0
+        },
+        {
+          "date": "2026-05-13",
+          "value": 0
+        },
+        {
+          "date": "2026-05-14",
+          "value": 0
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-objection": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 151
+        },
+        {
+          "date": "2026-05-12",
+          "value": 151
+        },
+        {
+          "date": "2026-05-13",
+          "value": 151
+        },
+        {
+          "date": "2026-05-14",
+          "value": 151
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 3
+        },
+        {
+          "date": "2026-05-12",
+          "value": 3
+        },
+        {
+          "date": "2026-05-13",
+          "value": 3
+        },
+        {
+          "date": "2026-05-14",
+          "value": 3
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-prisma": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 39
+        },
+        {
+          "date": "2026-05-12",
+          "value": 39
+        },
+        {
+          "date": "2026-05-13",
+          "value": 39
+        },
+        {
+          "date": "2026-05-14",
+          "value": 39
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 2
+        },
+        {
+          "date": "2026-05-12",
+          "value": 2
+        },
+        {
+          "date": "2026-05-13",
+          "value": 2
+        },
+        {
+          "date": "2026-05-14",
+          "value": 2
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-sequelize": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 140
+        },
+        {
+          "date": "2026-05-12",
+          "value": 140
+        },
+        {
+          "date": "2026-05-13",
+          "value": 140
+        },
+        {
+          "date": "2026-05-14",
+          "value": 140
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 2
+        },
+        {
+          "date": "2026-05-12",
+          "value": 2
+        },
+        {
+          "date": "2026-05-13",
+          "value": 2
+        },
+        {
+          "date": "2026-05-14",
+          "value": 2
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "c07d9824be8785119a591b717718d5cde64eb98f"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "c07d9824be8785119a591b717718d5cde64eb98f"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "c07d9824be8785119a591b717718d5cde64eb98f"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "c07d9824be8785119a591b717718d5cde64eb98f"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-sqlite3": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 1
+        },
+        {
+          "date": "2026-05-12",
+          "value": 1
+        },
+        {
+          "date": "2026-05-13",
+          "value": 1
+        },
+        {
+          "date": "2026-05-14",
+          "value": 1
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 1
+        },
+        {
+          "date": "2026-05-12",
+          "value": 1
+        },
+        {
+          "date": "2026-05-13",
+          "value": 1
+        },
+        {
+          "date": "2026-05-14",
+          "value": 1
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    },
+    "ledger-typeorm": {
+      "totalPackagesSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 196
+        },
+        {
+          "date": "2026-05-12",
+          "value": 196
+        },
+        {
+          "date": "2026-05-13",
+          "value": 196
+        },
+        {
+          "date": "2026-05-14",
+          "value": 196
+        }
+      ],
+      "directDepCountSeries": [
+        {
+          "date": "2026-05-05",
+          "value": 3
+        },
+        {
+          "date": "2026-05-12",
+          "value": 3
+        },
+        {
+          "date": "2026-05-13",
+          "value": 3
+        },
+        {
+          "date": "2026-05-14",
+          "value": 3
+        }
+      ],
+      "ciSeries": [
+        {
+          "date": "2026-05-05",
+          "conclusion": "success",
+          "headSha": "bde1b8df00a3c565030af360e14172026360688b"
+        },
+        {
+          "date": "2026-05-12",
+          "conclusion": "success",
+          "headSha": "bde1b8df00a3c565030af360e14172026360688b"
+        },
+        {
+          "date": "2026-05-13",
+          "conclusion": "success",
+          "headSha": "bde1b8df00a3c565030af360e14172026360688b"
+        },
+        {
+          "date": "2026-05-14",
+          "conclusion": "success",
+          "headSha": "bde1b8df00a3c565030af360e14172026360688b"
+        }
+      ],
+      "changes": [],
+      "lastChangeDate": null
+    }
+  },
+  "feed": []
+}
