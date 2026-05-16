@@ -3,50 +3,20 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "com.github.orm-fight/ledger-prisma",
-  "documentNamespace": "https://spdx.org/spdxdocs/protobom/98f59d44-cf19-42ab-bb45-304630ee1f0b",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/8ef7fd33-8fdf-415f-ae9a-68c89a431f77",
   "creationInfo": {
     "creators": [
-      "Tool: protobom-v0.0.0-20260512151742-fb7b26d83412+dirty",
+      "Tool: protobom-v0.0.0-20260515164932-8e3a9f2a611f+dirty",
       "Tool: GitHub.com-Dependency-Graph",
       "Tool: npm-cyclonedx-sbom"
     ],
-    "created": "2026-05-15T08:18:12Z"
+    "created": "2026-05-16T07:26:50Z"
   },
   "packages": [
     {
-      "name": "@prisma/engines",
-      "SPDXID": "SPDXRef-npm-prisma-engines-6.19.3-46f6e1",
-      "versionInfo": "6.19.3",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/engines@6.19.3"
-        }
-      ]
-    },
-    {
-      "name": "@prisma/get-platform",
-      "SPDXID": "SPDXRef-npm-prisma-get-platform-6.19.3-3bff83",
-      "versionInfo": "6.19.3",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/get-platform@6.19.3"
-        }
-      ]
-    },
-    {
-      "name": "c12",
-      "SPDXID": "SPDXRef-npm-c12-3.1.0-7af584",
-      "versionInfo": "3.1.0",
+      "name": "destr",
+      "SPDXID": "SPDXRef-npm-destr-2.0.5-2737ae",
+      "versionInfo": "2.0.5",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseConcluded": "MIT",
@@ -55,23 +25,23 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/c12@3.1.0"
+          "referenceLocator": "pkg:npm/destr@2.0.5"
         }
       ]
     },
     {
-      "name": "ohash",
-      "SPDXID": "SPDXRef-npm-ohash-2.0.11-71890a",
-      "versionInfo": "2.0.11",
+      "name": "@standard-schema/spec",
+      "SPDXID": "SPDXRef-npm-standard-schema-spec-1.1.0-74212a",
+      "versionInfo": "1.1.0",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "copyrightText": "Copyright (c) 2024 Colin McDonnell",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/ohash@2.0.11"
+          "referenceLocator": "pkg:npm/%40standard-schema/spec@1.1.0"
         }
       ]
     },
@@ -92,6 +62,69 @@
       ]
     },
     {
+      "name": "pure-rand",
+      "SPDXID": "SPDXRef-npm-pure-rand-6.1.0-47bde2",
+      "versionInfo": "6.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2018 Nicolas DUBIEN",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/pure-rand@6.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@prisma/config",
+      "SPDXID": "SPDXRef-npm-prisma-config-6.19.3-4350af",
+      "versionInfo": "6.19.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40prisma/config@6.19.3"
+        }
+      ]
+    },
+    {
+      "name": "rc9",
+      "SPDXID": "SPDXRef-npm-rc9-2.1.2-78a79c",
+      "versionInfo": "2.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014, Hugh Kennedy, Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rc9@2.1.2"
+        }
+      ]
+    },
+    {
+      "name": "deepmerge-ts",
+      "SPDXID": "SPDXRef-npm-deepmerge-ts-7.1.5-e8d3a3",
+      "versionInfo": "7.1.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2021, Rebecca Stevens",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/deepmerge-ts@7.1.5"
+        }
+      ]
+    },
+    {
       "name": "defu",
       "SPDXID": "SPDXRef-npm-defu-6.1.7-191e4b",
       "versionInfo": "6.1.7",
@@ -107,17 +140,17 @@
       ]
     },
     {
-      "name": "citty",
-      "SPDXID": "SPDXRef-npm-citty-0.2.2-74a750",
-      "versionInfo": "0.2.2",
+      "name": "@prisma/debug",
+      "SPDXID": "SPDXRef-npm-prisma-debug-6.19.3-70c509",
+      "versionInfo": "6.19.3",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/citty@0.2.2"
+          "referenceLocator": "pkg:npm/%40prisma/debug@6.19.3"
         }
       ]
     },
@@ -138,18 +171,33 @@
       ]
     },
     {
-      "name": "pkg-types",
-      "SPDXID": "SPDXRef-npm-pkg-types-2.3.0-d25a4f",
-      "versionInfo": "2.3.0",
+      "name": "dotenv",
+      "SPDXID": "SPDXRef-npm-dotenv-16.6.1-7dc8c6",
+      "versionInfo": "16.6.1",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright Joyent, Inc. and other Node contributors",
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2015, Scott Motte",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/pkg-types@2.3.0"
+          "referenceLocator": "pkg:npm/dotenv@16.6.1"
+        }
+      ]
+    },
+    {
+      "name": "citty",
+      "SPDXID": "SPDXRef-npm-citty-0.2.2-74a750",
+      "versionInfo": "0.2.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/citty@0.2.2"
         }
       ]
     },
@@ -166,6 +214,224 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:npm/pathe@2.0.3"
+        }
+      ]
+    },
+    {
+      "name": "citty",
+      "SPDXID": "SPDXRef-npm-citty-0.1.6-b0a88b",
+      "versionInfo": "0.1.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Luke Edwards luke.edwards05@gmail.com (lukeed.com), Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/citty@0.1.6"
+        }
+      ]
+    },
+    {
+      "name": "@prisma/get-platform",
+      "SPDXID": "SPDXRef-npm-prisma-get-platform-6.19.3-3bff83",
+      "versionInfo": "6.19.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40prisma/get-platform@6.19.3"
+        }
+      ]
+    },
+    {
+      "name": "node-fetch-native",
+      "SPDXID": "SPDXRef-npm-node-fetch-native-1.6.7-bc4542",
+      "versionInfo": "1.6.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Nathan Rajlich <nathan@tootallnate.net>, Copyright (c) 2016 - 2020 Node Fetch Team, Copyright (c) 2017 Toru Nagashima, Copyright (c) Matteo Collina and Undici contributors, Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright 2024 Mattias Buelens, Diwank Singh Tomer and other contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/node-fetch-native@1.6.7"
+        }
+      ]
+    },
+    {
+      "name": "ohash",
+      "SPDXID": "SPDXRef-npm-ohash-2.0.11-71890a",
+      "versionInfo": "2.0.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ohash@2.0.11"
+        }
+      ]
+    },
+    {
+      "name": "@prisma/engines",
+      "SPDXID": "SPDXRef-npm-prisma-engines-6.19.3-46f6e1",
+      "versionInfo": "6.19.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40prisma/engines@6.19.3"
+        }
+      ]
+    },
+    {
+      "name": "fast-check",
+      "SPDXID": "SPDXRef-npm-fast-check-3.23.2-bd9040",
+      "versionInfo": "3.23.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2017 Nicolas DUBIEN",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/fast-check@3.23.2"
+        }
+      ]
+    },
+    {
+      "name": "pkg-types",
+      "SPDXID": "SPDXRef-npm-pkg-types-2.3.0-d25a4f",
+      "versionInfo": "2.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/pkg-types@2.3.0"
+        }
+      ]
+    },
+    {
+      "name": "@prisma/client",
+      "SPDXID": "SPDXRef-npm-prisma-client-6.19.3-ee4405",
+      "versionInfo": "6.19.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40prisma/client@6.19.3"
+        }
+      ]
+    },
+    {
+      "name": "tinyexec",
+      "SPDXID": "SPDXRef-npm-tinyexec-1.1.1-1b6178",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tinyexec@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "effect",
+      "SPDXID": "SPDXRef-npm-effect-3.21.0-15c210",
+      "versionInfo": "3.21.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/effect@3.21.0"
+        }
+      ]
+    },
+    {
+      "name": "nypm",
+      "SPDXID": "SPDXRef-npm-nypm-0.6.5-f51862",
+      "versionInfo": "0.6.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/nypm@0.6.5"
+        }
+      ]
+    },
+    {
+      "name": "empathic",
+      "SPDXID": "SPDXRef-npm-empathic-2.0.0-fe9dc2",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Luke Edwards (https://lukeed.com), Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/empathic@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "c12",
+      "SPDXID": "SPDXRef-npm-c12-3.1.0-7af584",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/c12@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "giget",
+      "SPDXID": "SPDXRef-npm-giget-2.0.0-31d615",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BlueOak-1.0.0 AND ISC AND MIT",
+      "copyrightText": "Copyright (c) 2011-2023 James Halliday (mail@substack.net) and Isaac Z. Schlueter (i@izs.me), Copyright (c) 2017-2023 Isaac Z. Schlueter and Contributors, Copyright (c) 2017-2023 Joyent, Inc. and other Node contributors, Copyright (c) 2017-2023 Node.js contributors, Copyright (c) 2017-2023 npm, Inc., Isaac Z. Schlueter, and Contributors, Copyright (c) Isaac Z. Schlueter and Contributors, Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/giget@2.0.0"
         }
       ]
     },
@@ -201,99 +467,6 @@
       ]
     },
     {
-      "name": "rc9",
-      "SPDXID": "SPDXRef-npm-rc9-2.1.2-78a79c",
-      "versionInfo": "2.1.2",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) 2014, Hugh Kennedy, Copyright (c) Pooya Parsa <pooya@pi0.io>",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/rc9@2.1.2"
-        }
-      ]
-    },
-    {
-      "name": "@prisma/config",
-      "SPDXID": "SPDXRef-npm-prisma-config-6.19.3-4350af",
-      "versionInfo": "6.19.3",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/config@6.19.3"
-        }
-      ]
-    },
-    {
-      "name": "empathic",
-      "SPDXID": "SPDXRef-npm-empathic-2.0.0-fe9dc2",
-      "versionInfo": "2.0.0",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "(c) Luke Edwards (https://lukeed.com), Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/empathic@2.0.0"
-        }
-      ]
-    },
-    {
-      "name": "nypm",
-      "SPDXID": "SPDXRef-npm-nypm-0.6.5-f51862",
-      "versionInfo": "0.6.5",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/nypm@0.6.5"
-        }
-      ]
-    },
-    {
-      "name": "tinyexec",
-      "SPDXID": "SPDXRef-npm-tinyexec-1.1.1-1b6178",
-      "versionInfo": "1.1.1",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/tinyexec@1.1.1"
-        }
-      ]
-    },
-    {
-      "name": "citty",
-      "SPDXID": "SPDXRef-npm-citty-0.1.6-b0a88b",
-      "versionInfo": "0.1.6",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) Luke Edwards luke.edwards05@gmail.com (lukeed.com), Copyright (c) Pooya Parsa <pooya@pi0.io>",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/citty@0.1.6"
-        }
-      ]
-    },
-    {
       "name": "perfect-debounce",
       "SPDXID": "SPDXRef-npm-perfect-debounce-1.0.0-3118c3",
       "versionInfo": "1.0.0",
@@ -306,21 +479,6 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:npm/perfect-debounce@1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "@prisma/debug",
-      "SPDXID": "SPDXRef-npm-prisma-debug-6.19.3-70c509",
-      "versionInfo": "6.19.3",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/debug@6.19.3"
         }
       ]
     },
@@ -341,100 +499,6 @@
       ]
     },
     {
-      "name": "effect",
-      "SPDXID": "SPDXRef-npm-effect-3.21.0-15c210",
-      "versionInfo": "3.21.0",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/effect@3.21.0"
-        }
-      ]
-    },
-    {
-      "name": "fast-check",
-      "SPDXID": "SPDXRef-npm-fast-check-3.23.2-bd9040",
-      "versionInfo": "3.23.2",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) 2017 Nicolas DUBIEN",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/fast-check@3.23.2"
-        }
-      ]
-    },
-    {
-      "name": "@prisma/engines-version",
-      "SPDXID": "SPDXRef-npm-prisma-engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7-e5706d",
-      "versionInfo": "7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7"
-        }
-      ]
-    },
-    {
-      "name": "deepmerge-ts",
-      "SPDXID": "SPDXRef-npm-deepmerge-ts-7.1.5-e8d3a3",
-      "versionInfo": "7.1.5",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0 AND BSD-3-Clause",
-      "copyrightText": "Copyright (c) 2021, Rebecca Stevens",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/deepmerge-ts@7.1.5"
-        }
-      ]
-    },
-    {
-      "name": "@standard-schema/spec",
-      "SPDXID": "SPDXRef-npm-standard-schema-spec-1.1.0-74212a",
-      "versionInfo": "1.1.0",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) 2024 Colin McDonnell",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40standard-schema/spec@1.1.0"
-        }
-      ]
-    },
-    {
-      "name": "giget",
-      "SPDXID": "SPDXRef-npm-giget-2.0.0-31d615",
-      "versionInfo": "2.0.0",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "BlueOak-1.0.0 AND ISC AND MIT",
-      "copyrightText": "Copyright (c) 2011-2023 James Halliday (mail@substack.net) and Isaac Z. Schlueter (i@izs.me), Copyright (c) 2017-2023 Isaac Z. Schlueter and Contributors, Copyright (c) 2017-2023 Joyent, Inc. and other Node contributors, Copyright (c) 2017-2023 Node.js contributors, Copyright (c) 2017-2023 npm, Inc., Isaac Z. Schlueter, and Contributors, Copyright (c) Isaac Z. Schlueter and Contributors, Copyright (c) Pooya Parsa <pooya@pi0.io>",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/giget@2.0.0"
-        }
-      ]
-    },
-    {
       "name": "consola",
       "SPDXID": "SPDXRef-npm-consola-3.4.2-bc6fe4",
       "versionInfo": "3.4.2",
@@ -451,9 +515,9 @@
       ]
     },
     {
-      "name": "@prisma/client",
-      "SPDXID": "SPDXRef-npm-prisma-client-6.19.3-ee4405",
-      "versionInfo": "6.19.3",
+      "name": "@prisma/engines-version",
+      "SPDXID": "SPDXRef-npm-prisma-engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7-e5706d",
+      "versionInfo": "7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseConcluded": "Apache-2.0",
@@ -461,22 +525,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/client@6.19.3"
-        }
-      ]
-    },
-    {
-      "name": "@prisma/fetch-engine",
-      "SPDXID": "SPDXRef-npm-prisma-fetch-engine-6.19.3-396834",
-      "versionInfo": "6.19.3",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40prisma/fetch-engine@6.19.3"
+          "referenceLocator": "pkg:npm/%40prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7"
         }
       ]
     },
@@ -497,66 +546,17 @@
       ]
     },
     {
-      "name": "pure-rand",
-      "SPDXID": "SPDXRef-npm-pure-rand-6.1.0-47bde2",
-      "versionInfo": "6.1.0",
+      "name": "@prisma/fetch-engine",
+      "SPDXID": "SPDXRef-npm-prisma-fetch-engine-6.19.3-396834",
+      "versionInfo": "6.19.3",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) 2018 Nicolas DUBIEN",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/pure-rand@6.1.0"
-        }
-      ]
-    },
-    {
-      "name": "dotenv",
-      "SPDXID": "SPDXRef-npm-dotenv-16.6.1-7dc8c6",
-      "versionInfo": "16.6.1",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "BSD-2-Clause",
-      "copyrightText": "Copyright (c) 2015, Scott Motte",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/dotenv@16.6.1"
-        }
-      ]
-    },
-    {
-      "name": "node-fetch-native",
-      "SPDXID": "SPDXRef-npm-node-fetch-native-1.6.7-bc4542",
-      "versionInfo": "1.6.7",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) 2013 Nathan Rajlich <nathan@tootallnate.net>, Copyright (c) 2016 - 2020 Node Fetch Team, Copyright (c) 2017 Toru Nagashima, Copyright (c) Matteo Collina and Undici contributors, Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright 2024 Mattias Buelens, Diwank Singh Tomer and other contributors.",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/node-fetch-native@1.6.7"
-        }
-      ]
-    },
-    {
-      "name": "destr",
-      "SPDXID": "SPDXRef-npm-destr-2.0.5-2737ae",
-      "versionInfo": "2.0.5",
-      "downloadLocation": "NOASSERTION",
-      "filesAnalyzed": false,
-      "licenseConcluded": "MIT",
-      "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/destr@2.0.5"
+          "referenceLocator": "pkg:npm/%40prisma/fetch-engine@6.19.3"
         }
       ]
     },
@@ -620,22 +620,32 @@
   "relationships": [
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-engines-6.19.3-46f6e1",
+      "relatedSpdxElement": "SPDXRef-npm-nypm-0.6.5-f51862",
       "relationshipType": "DEPENDS_ON"
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-get-platform-6.19.3-3bff83",
+      "relatedSpdxElement": "SPDXRef-npm-perfect-debounce-1.0.0-3118c3",
       "relationshipType": "DEPENDS_ON"
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-ohash-2.0.11-71890a",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7-e5706d",
       "relationshipType": "DEPENDS_ON"
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-pathe-2.0.3-9493e9",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-fetch-engine-6.19.3-396834",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-pkg-types-2.3.0-d25a4f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-client-6.19.3-ee4405",
       "relationshipType": "DEPENDS_ON"
     },
     {
@@ -645,37 +655,7 @@
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-pure-rand-6.1.0-47bde2",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-consola-3.4.2-bc6fe4",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-exsolve-1.0.8-c182a2",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-debug-6.19.3-70c509",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-confbox-0.2.4-bf5bc8",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-fast-check-3.23.2-bd9040",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-c12-3.1.0-7af584",
+      "relatedSpdxElement": "SPDXRef-npm-standard-schema-spec-1.1.0-74212a",
       "relationshipType": "DEPENDS_ON"
     },
     {
@@ -685,12 +665,82 @@
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-standard-schema-spec-1.1.0-74212a",
+      "relatedSpdxElement": "SPDXRef-npm-deepmerge-ts-7.1.5-e8d3a3",
       "relationshipType": "DEPENDS_ON"
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-client-6.19.3-ee4405",
+      "relatedSpdxElement": "SPDXRef-npm-dotenv-16.6.1-7dc8c6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-get-platform-6.19.3-3bff83",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-fast-check-3.23.2-bd9040",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-consola-3.4.2-bc6fe4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-empathic-2.0.0-fe9dc2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-chokidar-4.0.3-545e87",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-confbox-0.2.4-bf5bc8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-debug-6.19.3-70c509",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-engines-6.19.3-46f6e1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-c12-3.1.0-7af584",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-prisma-6.19.3-ee90c3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-destr-2.0.5-2737ae",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-jiti-2.6.1-90391c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-citty-0.2.2-74a750",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-citty-0.1.6-b0a88b",
       "relationshipType": "DEPENDS_ON"
     },
     {
@@ -705,77 +755,17 @@
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-jiti-2.6.1-90391c",
+      "relatedSpdxElement": "SPDXRef-npm-pathe-2.0.3-9493e9",
       "relationshipType": "DEPENDS_ON"
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-pkg-types-2.3.0-d25a4f",
+      "relatedSpdxElement": "SPDXRef-npm-exsolve-1.0.8-c182a2",
       "relationshipType": "DEPENDS_ON"
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-effect-3.21.0-15c210",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-deepmerge-ts-7.1.5-e8d3a3",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-fetch-engine-6.19.3-396834",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-dotenv-16.6.1-7dc8c6",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-defu-6.1.7-191e4b",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-citty-0.2.2-74a750",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-6.19.3-ee90c3",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-empathic-2.0.0-fe9dc2",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-prisma-engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7-e5706d",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-destr-2.0.5-2737ae",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-citty-0.1.6-b0a88b",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-perfect-debounce-1.0.0-3118c3",
-      "relationshipType": "DEPENDS_ON"
-    },
-    {
-      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-chokidar-4.0.3-545e87",
+      "relatedSpdxElement": "SPDXRef-npm-pure-rand-6.1.0-47bde2",
       "relationshipType": "DEPENDS_ON"
     },
     {
@@ -785,7 +775,7 @@
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-npm-nypm-0.6.5-f51862",
+      "relatedSpdxElement": "SPDXRef-npm-ohash-2.0.11-71890a",
       "relationshipType": "DEPENDS_ON"
     },
     {
@@ -795,7 +785,12 @@
     },
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
-      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-7..-06bf9b",
+      "relatedSpdxElement": "SPDXRef-npm-effect-3.21.0-15c210",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-npm-defu-6.1.7-191e4b",
       "relationshipType": "DEPENDS_ON"
     },
     {
@@ -806,6 +801,11 @@
     {
       "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
       "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6..-b6d641",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-orm-fight-ledger-prisma-main-815fbc",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-7..-06bf9b",
       "relationshipType": "DEPENDS_ON"
     },
     {
