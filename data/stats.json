@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-29T08:53:13.929Z",
+  "generatedAt": "2026-05-30T07:58:28.727Z",
   "source": "github-dependency-graph-sbom",
   "workspace": "orm-fight",
   "repoCount": 10,
@@ -39,7 +39,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-better-sqlite3",
-        "createdAt": "2026-05-29T08:53:09Z",
+        "createdAt": "2026-05-30T07:58:25Z",
         "totalPackages": 42,
         "packagesByEcosystem": {
           "npm": 38,
@@ -97,7 +97,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-drizzle",
-        "createdAt": "2026-05-29T08:53:09Z",
+        "createdAt": "2026-05-30T07:58:25Z",
         "totalPackages": 40,
         "packagesByEcosystem": {
           "npm": 39,
@@ -151,7 +151,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-kysely",
-        "createdAt": "2026-05-29T08:53:10Z",
+        "createdAt": "2026-05-30T07:58:25Z",
         "totalPackages": 40,
         "packagesByEcosystem": {
           "npm": 39,
@@ -205,14 +205,14 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-mikro-orm",
-        "createdAt": "2026-05-29T08:53:10Z",
+        "createdAt": "2026-05-30T07:58:26Z",
         "totalPackages": 180,
         "packagesByEcosystem": {
           "npm": 179,
           "github": 1
         },
         "licenses": {
-          "MIT": 119,
+          "MIT": 120,
           "ISC": 45,
           "Apache-2.0": 3,
           "BSD-2-Clause": 2,
@@ -221,7 +221,6 @@
           "BlueOak-1.0.0": 1,
           "BSD-2-Clause AND BSD-3-Clause": 1,
           "CC0-1.0 AND MIT": 1,
-          "GPL-3.0": 1,
           "ISC AND MIT": 1,
           "MIT AND MIT-0": 1,
           "MIT OR (MIT AND WTFPL)": 1
@@ -263,7 +262,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-node-sqlite",
-        "createdAt": "2026-05-29T08:53:11Z",
+        "createdAt": "2026-05-30T07:58:26Z",
         "totalPackages": 1,
         "packagesByEcosystem": {
           "github": 1
@@ -310,14 +309,14 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-objection",
-        "createdAt": "2026-05-29T08:53:11Z",
+        "createdAt": "2026-05-30T07:58:27Z",
         "totalPackages": 151,
         "packagesByEcosystem": {
           "npm": 150,
           "github": 1
         },
         "licenses": {
-          "MIT": 94,
+          "MIT": 95,
           "ISC": 43,
           "BSD-3-Clause": 3,
           "Apache-2.0": 2,
@@ -325,7 +324,6 @@
           "BlueOak-1.0.0": 1,
           "BSD-2-Clause": 1,
           "CC0-1.0 AND MIT": 1,
-          "GPL-3.0": 1,
           "ISC AND MIT": 1,
           "MIT AND MIT-0": 1,
           "MIT OR (MIT AND WTFPL)": 1
@@ -371,7 +369,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-prisma",
-        "createdAt": "2026-05-29T08:53:12Z",
+        "createdAt": "2026-05-30T07:58:27Z",
         "totalPackages": 39,
         "packagesByEcosystem": {
           "npm": 35,
@@ -428,7 +426,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-sequelize",
-        "createdAt": "2026-05-29T08:53:12Z",
+        "createdAt": "2026-05-30T07:58:27Z",
         "totalPackages": 140,
         "packagesByEcosystem": {
           "npm": 139,
@@ -486,7 +484,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-sqlite3",
-        "createdAt": "2026-05-29T08:53:13Z",
+        "createdAt": "2026-05-30T07:58:28Z",
         "totalPackages": 1,
         "packagesByEcosystem": {
           "github": 1
@@ -533,7 +531,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-typeorm",
-        "createdAt": "2026-05-29T08:53:13Z",
+        "createdAt": "2026-05-30T07:58:28Z",
         "totalPackages": 196,
         "packagesByEcosystem": {
           "npm": 195,
