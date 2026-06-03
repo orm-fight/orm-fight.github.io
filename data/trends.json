@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-02T09:19:29.076Z",
+  "generatedAt": "2026-06-03T10:09:21.797Z",
   "windowDays": 30,
   "snapshotDates": [
     "2026-05-05",
@@ -21,7 +21,8 @@
     "2026-05-30",
     "2026-05-31",
     "2026-06-01",
-    "2026-06-02"
+    "2026-06-02",
+    "2026-06-03"
   ],
   "repos": {
     "ledger-better-sqlite3": {
@@ -101,6 +102,10 @@
         {
           "date": "2026-06-02",
           "value": 42
+        },
+        {
+          "date": "2026-06-03",
+          "value": 42
         }
       ],
       "directDepCountSeries": [
@@ -178,6 +183,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 1
+        },
+        {
+          "date": "2026-06-03",
           "value": 1
         }
       ],
@@ -274,6 +283,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "cbe024b846d20a256ba095a98d379bddb09b820b"
         }
@@ -358,6 +372,10 @@
         {
           "date": "2026-06-02",
           "value": 40
+        },
+        {
+          "date": "2026-06-03",
+          "value": 40
         }
       ],
       "directDepCountSeries": [
@@ -435,6 +453,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 2
+        },
+        {
+          "date": "2026-06-03",
           "value": 2
         }
       ],
@@ -531,6 +553,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "88bba03c41c5d099ca161d79b2260dc97c9c6de2"
         }
@@ -615,6 +642,10 @@
         {
           "date": "2026-06-02",
           "value": 40
+        },
+        {
+          "date": "2026-06-03",
+          "value": 40
         }
       ],
       "directDepCountSeries": [
@@ -692,6 +723,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 2
+        },
+        {
+          "date": "2026-06-03",
           "value": 2
         }
       ],
@@ -788,6 +823,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "0144b17d0c07c3324a67defee2e56cb49e6414bd"
         }
@@ -872,6 +912,10 @@
         {
           "date": "2026-06-02",
           "value": 180
+        },
+        {
+          "date": "2026-06-03",
+          "value": 180
         }
       ],
       "directDepCountSeries": [
@@ -949,6 +993,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 2
+        },
+        {
+          "date": "2026-06-03",
           "value": 2
         }
       ],
@@ -1045,6 +1093,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "42ce92dbeadef852baad7ae580ec52dfa46a0925"
         }
@@ -1129,6 +1182,10 @@
         {
           "date": "2026-06-02",
           "value": 1
+        },
+        {
+          "date": "2026-06-03",
+          "value": 1
         }
       ],
       "directDepCountSeries": [
@@ -1206,6 +1263,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 0
+        },
+        {
+          "date": "2026-06-03",
           "value": 0
         }
       ],
@@ -1302,6 +1363,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "1af45ba1210bc0504fda7f6731b6be03f9f8a950"
         }
@@ -1386,6 +1452,10 @@
         {
           "date": "2026-06-02",
           "value": 151
+        },
+        {
+          "date": "2026-06-03",
+          "value": 151
         }
       ],
       "directDepCountSeries": [
@@ -1463,6 +1533,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 3
+        },
+        {
+          "date": "2026-06-03",
           "value": 3
         }
       ],
@@ -1559,6 +1633,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "844248ce8cec7c8d47329e61119e0d53d790d3fc"
         }
@@ -1643,6 +1722,10 @@
         {
           "date": "2026-06-02",
           "value": 39
+        },
+        {
+          "date": "2026-06-03",
+          "value": 39
         }
       ],
       "directDepCountSeries": [
@@ -1720,6 +1803,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 2
+        },
+        {
+          "date": "2026-06-03",
           "value": 2
         }
       ],
@@ -1816,6 +1903,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "763b70dca7ccace08bcfb7dcb50ce3bb58ccd66c"
         }
@@ -1900,6 +1992,10 @@
         {
           "date": "2026-06-02",
           "value": 140
+        },
+        {
+          "date": "2026-06-03",
+          "value": 140
         }
       ],
       "directDepCountSeries": [
@@ -1977,6 +2073,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 2
+        },
+        {
+          "date": "2026-06-03",
           "value": 2
         }
       ],
@@ -2073,6 +2173,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "c07d9824be8785119a591b717718d5cde64eb98f"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "c07d9824be8785119a591b717718d5cde64eb98f"
         }
@@ -2157,6 +2262,10 @@
         {
           "date": "2026-06-02",
           "value": 1
+        },
+        {
+          "date": "2026-06-03",
+          "value": 1
         }
       ],
       "directDepCountSeries": [
@@ -2234,6 +2343,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 1
+        },
+        {
+          "date": "2026-06-03",
           "value": 1
         }
       ],
@@ -2330,6 +2443,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "a218709109d3c1fb38b55ec3f24cbf7cbf61bb87"
         }
@@ -2414,6 +2532,10 @@
         {
           "date": "2026-06-02",
           "value": 196
+        },
+        {
+          "date": "2026-06-03",
+          "value": 196
         }
       ],
       "directDepCountSeries": [
@@ -2491,6 +2613,10 @@
         },
         {
           "date": "2026-06-02",
+          "value": 3
+        },
+        {
+          "date": "2026-06-03",
           "value": 3
         }
       ],
@@ -2587,6 +2713,11 @@
         },
         {
           "date": "2026-06-02",
+          "conclusion": "success",
+          "headSha": "bde1b8df00a3c565030af360e14172026360688b"
+        },
+        {
+          "date": "2026-06-03",
           "conclusion": "success",
           "headSha": "bde1b8df00a3c565030af360e14172026360688b"
         }
