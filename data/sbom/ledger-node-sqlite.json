@@ -3,14 +3,14 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "com.github.orm-fight/ledger-node-sqlite",
-  "documentNamespace": "https://spdx.org/spdxdocs/protobom/26bcd83e-6879-4d75-be45-c9f4f42a7b1e",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/21e9010f-f405-4d12-86fe-f0b9374d3c5d",
   "creationInfo": {
     "creators": [
-      "Tool: protobom-v0.0.0-20260720171009-bd423dfbb7ac+dirty",
+      "Tool: protobom-v0.0.0-20260722142257-8214b02a8183+dirty",
       "Tool: GitHub.com-Dependency-Graph",
       "Tool: npm-cyclonedx-sbom"
     ],
-    "created": "2026-07-22T07:43:16Z"
+    "created": "2026-07-23T07:44:25Z"
   },
   "packages": [
     {
