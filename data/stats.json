@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-05T07:56:55.397Z",
+  "generatedAt": "2026-08-06T07:56:19.480Z",
   "source": "github-dependency-graph-sbom",
   "workspace": "orm-fight",
   "repoCount": 10,
@@ -39,7 +39,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-better-sqlite3",
-        "createdAt": "2026-08-05T07:56:52Z",
+        "createdAt": "2026-08-06T07:56:15Z",
         "totalPackages": 42,
         "packagesByEcosystem": {
           "npm": 38,
@@ -97,7 +97,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-drizzle",
-        "createdAt": "2026-08-05T07:56:52Z",
+        "createdAt": "2026-08-06T07:56:15Z",
         "totalPackages": 40,
         "packagesByEcosystem": {
           "npm": 39,
@@ -151,7 +151,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-kysely",
-        "createdAt": "2026-08-05T07:56:53Z",
+        "createdAt": "2026-08-06T07:56:16Z",
         "totalPackages": 40,
         "packagesByEcosystem": {
           "npm": 39,
@@ -205,14 +205,14 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-mikro-orm",
-        "createdAt": "2026-08-05T07:56:53Z",
+        "createdAt": "2026-08-06T07:56:16Z",
         "totalPackages": 180,
         "packagesByEcosystem": {
           "npm": 179,
           "github": 1
         },
         "licenses": {
-          "MIT": 120,
+          "MIT": 121,
           "ISC": 45,
           "Apache-2.0": 3,
           "BSD-2-Clause": 2,
@@ -220,7 +220,6 @@
           "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
           "BlueOak-1.0.0": 1,
           "BSD-2-Clause AND BSD-3-Clause": 1,
-          "CC0-1.0 AND MIT": 1,
           "ISC AND MIT": 1,
           "MIT AND MIT-0": 1,
           "MIT OR (MIT AND WTFPL)": 1
@@ -262,7 +261,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-node-sqlite",
-        "createdAt": "2026-08-05T07:56:53Z",
+        "createdAt": "2026-08-06T07:56:17Z",
         "totalPackages": 1,
         "packagesByEcosystem": {
           "github": 1
@@ -309,21 +308,20 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-objection",
-        "createdAt": "2026-08-05T07:56:54Z",
+        "createdAt": "2026-08-06T07:56:17Z",
         "totalPackages": 151,
         "packagesByEcosystem": {
           "npm": 150,
           "github": 1
         },
         "licenses": {
-          "MIT": 95,
+          "MIT": 96,
           "ISC": 43,
           "BSD-3-Clause": 3,
           "Apache-2.0": 2,
           "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
           "BlueOak-1.0.0": 1,
           "BSD-2-Clause": 1,
-          "CC0-1.0 AND MIT": 1,
           "ISC AND MIT": 1,
           "MIT AND MIT-0": 1,
           "MIT OR (MIT AND WTFPL)": 1
@@ -369,7 +367,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-prisma",
-        "createdAt": "2026-08-05T07:56:54Z",
+        "createdAt": "2026-08-06T07:56:17Z",
         "totalPackages": 39,
         "packagesByEcosystem": {
           "npm": 35,
@@ -426,21 +424,20 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-sequelize",
-        "createdAt": "2026-08-05T07:56:54Z",
+        "createdAt": "2026-08-06T07:56:18Z",
         "totalPackages": 140,
         "packagesByEcosystem": {
           "npm": 139,
           "github": 1
         },
         "licenses": {
-          "MIT": 85,
+          "MIT": 86,
           "ISC": 43,
           "Apache-2.0": 2,
           "BSD-3-Clause": 2,
           "Apache-2.0 OR BSD-2-Clause OR MIT OR (Apache-2.0 AND BSD-2-Clause) OR (Apache-2.0 AND MIT) OR (BSD-2-Clause AND MIT)": 1,
           "BlueOak-1.0.0": 1,
           "BSD-2-Clause": 1,
-          "CC0-1.0 AND MIT": 1,
           "ISC AND MIT": 1,
           "MIT AND MIT-0": 1,
           "MIT OR (MIT AND WTFPL)": 1
@@ -484,7 +481,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-sqlite3",
-        "createdAt": "2026-08-05T07:56:54Z",
+        "createdAt": "2026-08-06T07:56:18Z",
         "totalPackages": 1,
         "packagesByEcosystem": {
           "github": 1
@@ -531,7 +528,7 @@
       "sbom": {
         "spdxVersion": "SPDX-2.3",
         "documentName": "com.github.orm-fight/ledger-typeorm",
-        "createdAt": "2026-08-05T07:56:55Z",
+        "createdAt": "2026-08-06T07:56:19Z",
         "totalPackages": 196,
         "packagesByEcosystem": {
           "npm": 195,
